@@ -2,13 +2,13 @@ SOC:
   MROM: {
     name: SOC.IO.MROM,
     start: 0x00001000,
-    end:   0x00001fff,
+    end:   0x0000ffff,
     heterogeneous: true
     }
   DEBUG: {
     name: SOC.IO.DEBUG,
     start: 0x00000000,
-    end:   0x01ffffff,
+    end:   0x000000ff,
     heterogeneous: true
     }
   TEST: {
@@ -26,7 +26,7 @@ SOC:
   ITIM: {
     name: SOC.IO.ITIM,
     start: 0x08000000,
-    end:   0x08001fff,
+    end:   0x09ffffff,
     heterogeneous: true
     }
   PLIC: {
@@ -35,83 +35,66 @@ SOC:
     end:   0x0fffffff,
     heterogeneous: true
     }
-  RAM: {
+  DRAM: {
     name: SOC.Memory.Ram_0,
     start: 0x80000000,
     end:   0xffffffff,
     tag_granularity: 4,
     heterogeneous: true
     }
-  AON: {
-    name: SOC.IO.AON,
-    start: 0x10000000,
-    end:   0x10007fff,
-    heterogeneous: false
-    }
   PRCI: {
     name: SOC.IO.PRCI,
-    start: 0x10008000,
-    end:   0x1000ffff,
-    heterogeneous: false
-    }
-  OTP: {
-    name: SOC.IO.OTP,
-    start: 0x10010000,
-    end:   0x10010fff,
-    heterogeneous: false
-    }
-  EFLASH: {
-    name: SOC.IO.EFLASH,
-    start: 0x10011000,
-    end:   0x10011fff,
-    heterogeneous: false
-    }
-  GPIO0: {
-    name: SOC.IO.GPIO_0,
-    start: 0x10012000,
-    end:   0x10012fff,
+    start: 0x10000000,
+    end:   0x10000fff,
     heterogeneous: false
     }
   UART0: {
     name: SOC.IO.UART_0,
-    start: 0x10013000,
-    end:   0x10013fff,
+    start: 0x10010000,
+    end:   0x1001ffff,
     heterogeneous: false
     }
-  QSPI0: {
-    name: SOC.IO.QSPI_0,
-    start: 0x10014000,
-    end:   0x10014fff,
+  UART1: {
+    name: SOC.IO.UART_1,
+    start: 0x10011000,
+    end:   0x10011fff,
     heterogeneous: false
     }
+  GPIO: {
+    name: SOC.IO.GPIO,
+    start: 0x10060000,
+    end:   0x10060fff,
+    heterogeneous: false
+    }
+  OTP: {
+    name: SOC.IO.OTP,
+    start: 0x10070000,
+    end:   0x10070fff,
+    heterogeneous: false
+    }
+
+  GEM_MGMT: {
+    name: SOC.IO.GEM_MGMT,
+    start: 0x100a0000,
+    end:   0x100a0fff,
+    heterogeneous: false
+    }
+  DMC: {
+    name: SOC.IO.DMC,
+    start: 0x100b0000,
+    end:   0x100bffff,
+    heterogeneous: false
+    }
+
   GEM0: {
     name: SOC.IO.GEM0,
     start: 0x10090000,
-    end:   0x10092000,
+    end:   0x10091fff,
     heterogeneous: false
     }
   FLASH: {
     name: SOC.Memory.Flash_0,
     start: 0x20000000,
-    end:   0x40000000,
+    end:   0x2fffffff,
     heterogeneous: true
     }
-  MTIME: {
-    name: SOC.IO.MTIME,
-    start: 0x4400bff8,
-    end:   0x4400c000,
-    heterogeneous: false
-    }
-  MTIME_CMP: {
-    name: SOC.IO.MTIME_CMP,
-    start: 0x44004000,
-    end:   0x44004010,
-    heterogeneous: false
-    }
-  GEM0: {
-    name: SOC.IO.GEM0,
-    start: 0x10090000,
-    end:   0x10092000,
-    heterogeneous: false
-    }
-
