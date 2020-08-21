@@ -17,7 +17,7 @@ below.
 # Renode
 
 [Renode](https://github.com/renode/renode) is an SOC simulator project by
-[AntMicro](https://antmicro.com/).  The simulator is written primarily in C#,
+[Antmicro](https://antmicro.com/).  The simulator is written primarily in C#,
 but uses a number of external C/C++ libraries for some of its core.  In
 particular, the underlying CPU emulations are implemented using libqemu.  Renode
 runs on multiple platfoms, and supports debugging emulated code with GDB.
